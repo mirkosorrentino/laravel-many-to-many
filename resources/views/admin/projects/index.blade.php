@@ -22,6 +22,9 @@
                     <a href="{{ route('admin.projects.show', $project->slug) }}" class="btn btn-success">
                         <i class="fa-solid fa-eye"></i>
                     </a>
+                    <a href="{{ route('admin.projects.create', $project->slug) }}" class="btn btn-primary">
+                        <i class="fa-solid fa-square-plus"></i>
+                    </a>
                 </td>
             </tr>
         @endforeach
