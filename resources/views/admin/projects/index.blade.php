@@ -24,9 +24,17 @@
                 <td>{{ $project->title }}</td>
                 <td>{{ $project->slug }}</td>
                 <td>
+                    {{-- show button --}}
                     <a href="{{ route('admin.projects.show', $project->slug) }}" class="btn btn-success">
                         <i class="fa-solid fa-eye"></i>
                     </a>
+
+                    {{-- edit button --}}
+                    <a href="{{ route('admin.projects.edit', $project->slug) }}" class="btn btn-warning">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+
+                    {{-- delete button --}}
                     <form class="d-inline-block" action="{{ route('admin.projects.destroy', $project->slug) }}" method="POST">
                         @method('DELETE')
                         @csrf
