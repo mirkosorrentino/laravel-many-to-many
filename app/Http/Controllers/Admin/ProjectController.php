@@ -77,13 +77,13 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Project $project)
     {
         $data = $request->all();
         $project->title = $data['title'];
         $project->description = $data['description'];
         $project->slug = Str::slug($project->title, '-');
-        $project->update($data);
+        $project->save();
         return redirect()->route('admin.projects.index');
     }
 

@@ -4,8 +4,10 @@
     <div class="container">
         <h2>Aggiorna il progetto</h2>
 
-        <form action="{{ route('admin.projects.store') }}" method="POST">
+        <form action="{{ route('admin.projects.update', $project->slug) }}" method="POST">
+            @method('PUT')
             @csrf
+
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $project->title) }}">

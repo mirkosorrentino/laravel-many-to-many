@@ -1,14 +1,21 @@
 @extends('layouts.admin')
 
 @section('content')
-<h1>Lista dei Progetti</h1>
-<div class="text-end">
-    <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">
-        <i class="fa-solid fa-square-plus"></i> Aggiungi un nuovo progetto
-    </a>
+<h1 class="text-uppercase text-center">Lista dei Progetti</h1>
+<div class="d-flex justify-content-between">
+    <div>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">
+            <i class="fa-solid fa-house"></i> Torna alla home
+        </a>
+    </div>
+    <div>
+        <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">
+            <i class="fa-solid fa-square-plus"></i> Aggiungi un nuovo progetto
+        </a>
+    </div>
 </div>
 
-<table class="table">
+<table class="table text-center">
     <thead>
         <tr>
             <th scope="col">Id</th>
