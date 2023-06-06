@@ -20,6 +20,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Invia</button>
+            <a href="{{ route('admin.projects.index') }}" class="btn btn-danger">Annulla</a>
 
         </form>
     </div>
