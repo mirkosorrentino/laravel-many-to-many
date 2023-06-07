@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+@include('partials.session_message')
 <h1 class="text-uppercase text-center">Lista dei Progetti</h1>
 <div class="d-flex justify-content-between">
     <div>

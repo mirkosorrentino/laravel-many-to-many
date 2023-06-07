@@ -31,7 +31,8 @@ class StoreProjectRequest extends FormRequest
                 'max:100',
                 Rule::unique('projects')
             ],
-            'description'=>'required'
+            'description'=>'required',
+            'type_id' => ['nullable', 'exists:types,id']
         ];
     }
 
