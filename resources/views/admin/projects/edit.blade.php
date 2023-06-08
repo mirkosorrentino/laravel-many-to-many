@@ -25,6 +25,15 @@
                 @enderror
             </div>
 
+            <div class="mb-3">
+                <label for="type">Tipo di progetto</label>
+                <select class="form-select" id="type" name="type_id">
+                    <option value=""></option>
+                    @foreach ($types as $type)
+                        <option @selected(old('type_id') == $type->id) value="{{ $type->id }}">{{ $type->title }}</option>
+                    @endforeach
+                </select>
+            </div>
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
