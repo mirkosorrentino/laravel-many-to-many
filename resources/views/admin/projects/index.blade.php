@@ -23,6 +23,7 @@
             <th scope="col">Titolo</th>
             <th scope="col">Categoria</th>
             <th scope="col">Slug</th>
+            <th scope="col">Tecnologia</th>
             <th scope="col">Actions</th> 
         </tr>
     </thead>
@@ -33,6 +34,7 @@
                 <td>{{ $project->title }}</td>
                 <td>{{ $project->type?->title }}</td>
                 <td>{{ $project->slug }}</td>
+                <td>Tecnologia</td>
                 <td>
                     {{-- show button --}}
                     <a href="{{ route('admin.projects.show', $project->slug) }}" class="btn btn-success">
