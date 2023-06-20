@@ -13,5 +13,13 @@
         <span>{{ $project->slug }}</span>
     </div>
     <p class="mt-4">{{ $project->description }}</p>
+    <div>Tecnologie utilizzate:</div>
+    <ul>
+        @forelse ($project->technology as $tech)
+            <li>{{ $tech->title }}</li>
+        @empty
+            <li>Nessuna tecnologia segnalata</li>         
+        @endforelse
+    </ul>
 </main>
 @endsection
