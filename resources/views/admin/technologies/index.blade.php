@@ -47,7 +47,7 @@
                     </a>
 
                     {{-- delete button --}}
-                    <form class="d-inline-block" action="" method="POST">
+                    <form class="d-inline-block" action="{{ route('admin.technologies.destroy', $technology->slug) }}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger">
