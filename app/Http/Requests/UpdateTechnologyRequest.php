@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreTechnologyRequest extends FormRequest
+class UpdateTechnologyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,7 +22,7 @@ class StoreTechnologyRequest extends FormRequest
      * @return array<string, mixed>
      */
     public function rules()
-    {
+    {  
         return [
             'title'=>[
                 'required', 

@@ -42,7 +42,7 @@
                     </a>
 
                     {{-- edit button --}}
-                    <a href="" class="btn btn-warning">
+                    <a href="{{ route('admin.technologies.edit', $technology->slug) }}" class="btn btn-warning">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
 
