@@ -38,7 +38,6 @@
             <div class="mb-3">
                 <label for="creator" class="form-label">Creatore</label>
                 <input type="text" class="form-control @error('creator') is-invalid @enderror" id="title" name="creator" value="{{ old('creator', $technology->creator) }}">
-                {{-- <textarea class="form-control @error('creator') is-invalid @enderror" name="creator" id="creator" rows="3">{{ old('creator', $technology->creator) }}</textarea> --}}
                 @error('creator')
                 <div class="invalid-feedback">
                     {{ $message }}
