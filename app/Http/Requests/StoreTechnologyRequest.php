@@ -32,7 +32,19 @@ class StoreTechnologyRequest extends FormRequest
             ],
             'description'=>'nullable',
             'creator' => 'nullable',
-            'date_of_birth' => 'nullable'
+            'date_of_birth' => [
+                'nullable',
+                'date_format:Y-m-d'
+                ]
+        ];
+    }
+
+     public function messages() {
+        return [
+            'title.required' => 'Il campo è obbligatorio',
+            'title.min' => 'Il titolo deve essere lungo almeno :min caratteri',
+            'title.max' => 'Il titolo non deve superare :max caratteri',
+            'date_of_birth.date_format' => 'Il campo deve avere il formato YYYY-mm-dd'
         ];
     }
 }
