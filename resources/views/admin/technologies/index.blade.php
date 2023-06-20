@@ -10,7 +10,7 @@
         </a>
     </div>
     <div>
-        <a href="" class="btn btn-primary">
+        <a href="{{ route('admin.technologies.create') }}" class="btn btn-primary">
             <i class="fa-solid fa-square-plus"></i> Aggiungi una nuova tecnologia
         </a>
     </div>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreTechnologyRequest;
 use App\Models\Technology;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TechnologyController extends Controller
 {
@@ -26,7 +28,7 @@ class TechnologyController extends Controller
      */
     public function create()
     {
-       
+       return view('admin.technologies.create');
     }
 
     /**
@@ -35,9 +37,12 @@ class TechnologyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTechnologyRequest $request)
     {
-       
+        $data = $request->validated();
+        $data['slug'] = Str::slug($data['title']);
+        $technology = Technology::create($data);
+        return redirect()->route('admin.technologies.index')->with('message', 'La tecnologia "{$technology->title}" è stata creata');
     }
 
 
